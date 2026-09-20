@@ -241,4 +241,1225 @@ const DICT = {
     f_today: 'اليوم', f_upcoming: 'القادمة', f_pending: 'قيد الانتظار', f_previous: 'السابقة', f_all: 'الكل',
     searchBookings: 'ابحث بالاسم أو الموبايل أو الخدمة', searchCustomers: 'ابحث بالاسم أو الموبايل أو الإيميل',
     actConfirm: 'تأكيد', actReject: 'رفض', actCancel: 'إلغاء الحجز', actComplete: 'إتمام', actEdit: 'تعديل',
-    reasonTitle: 'سبب (اختياري)', reasonPlaceholder: 'اكتب سببًا يظهر للعميل…
+    reasonTitle: 'سبب (اختياري)', reasonPlaceholder: 'اكتب سببًا يظهر للعميل…',
+    editBookingTitle: 'تعديل الحجز', fDate: 'التاريخ', fTime: 'الوقت', fNote: 'ملاحظة الأدمن',
+    reschedNote: 'تغيير الموعد يُرسل إشعارًا للعميل.', noBookings: 'لا توجد حجوزات هنا.',
+    custName: 'الاسم', custPhone: 'الموبايل', custEmail: 'الإيميل', custSince: 'سجّل في', custBookings: 'الحجوزات',
+    custLast: 'آخر حجز', custHistory: 'سجل الحجوزات', noCustomers: 'لا يوجد عملاء بعد.',
+    svcAdd: 'إضافة خدمة', svcEdit: 'تعديل الخدمة', svcNameAr: 'الاسم بالعربي', svcNameEn: 'الاسم بالإنجليزي',
+    svcDescAr: 'الوصف بالعربي', svcDescEn: 'الوصف بالإنجليزي', svcPrice: 'السعر (ج.م)', svcDuration: 'المدة (دقيقة)',
+    svcActivate: 'تفعيل', svcDeactivate: 'إيقاف', svcOrder: 'الترتيب', svcImage: 'رابط الصورة (اختياري)', svcActive: 'مفعّلة للعملاء',
+    svcDeleteConfirm: 'سيتم حذف الخدمة نهائيًا. الحجوزات القديمة تحتفظ باسمها وسعرها. الأفضل إيقافها بدل الحذف.',
+    noServices: 'لا توجد خدمات. أضف أول خدمة.', errNames: 'اكتب اسم الخدمة بالعربي والإنجليزي.',
+    errDurationMax: 'أقصى مدة للخدمة الواحدة {n} دقيقة (حسب الفاصل بين المواعيد).', errPrice: 'اكتب سعرًا صحيحًا.', errDuration: 'اكتب مدة صحيحة (5 دقائق على الأقل).',
+    schedTitle: 'ساعات العمل', open: 'مفتوح', closed: 'مغلق', from: 'من', to: 'إلى',
+    closedDates: 'إجازات وتواريخ غير متاحة', addDate: 'إضافة تاريخ', noClosedDates: 'لا توجد تواريخ مضافة.',
+    errHours: 'وقت الإغلاق يجب أن يكون بعد وقت الفتح.',
+    setSalon: 'بيانات الصالون', salonNameAr: 'الاسم بالعربي', salonNameEn: 'الاسم بالإنجليزي', salonPhone: 'رقم التليفون', salonAddress: 'العنوان',
+    setRules: 'قواعد الحجز والإلغاء', ruleStep: 'الفاصل بين المواعيد (دقيقة)', ruleAdvance: 'أقل مدة قبل الموعد للحجز (دقيقة)',
+    ruleMaxDays: 'أقصى عدد أيام للحجز مقدمًا', ruleCancel: 'آخر وقت للإلغاء قبل الموعد (دقيقة)',
+    notifTitle: 'إرسال إشعار للعملاء', notifAudience: 'المستلمون', audAll: 'كل العملاء', audOne: 'عميل واحد',
+    titleAr: 'العنوان بالعربي', titleEn: 'العنوان بالإنجليزي', bodyAr: 'النص بالعربي', bodyEn: 'النص بالإنجليزي',
+    send: 'إرسال', sent: 'تم الإرسال إلى {n} عميل.', notifHint: 'الإشعار يصل للعميل بلغة تطبيقه. أكمل النصين.', errNotif: 'أكمل العنوان والنص بالعربي والإنجليزي.',
+    repRange: 'الفترة', rep7: '7 أيام', rep30: '30 يومًا', rep90: '90 يومًا', repAll: 'الكل',
+    repTotal: 'إجمالي الحجوزات', repCompleted: 'المكتملة', repRevenue: 'الإيراد', repCancelRate: 'نسبة الإلغاء والرفض',
+    repByService: 'حسب الخدمة', repByDay: 'حسب اليوم', count: 'العدد', service: 'الخدمة',
+    err_slot_taken: 'هذا الموعد لم يعد متاحًا.', err_slot_in_past: 'هذا الموعد في الماضي.', err_too_far_ahead: 'الموعد بعيد جدًا.',
+    err_closed_date: 'الصالون مغلق في هذا التاريخ.', err_closed_day: 'الصالون مغلق في هذا اليوم.',
+    err_outside_working_hours: 'الموعد خارج ساعات العمل.', err_invalid_datetime: 'تاريخ أو وقت غير صحيح.',
+    err_invalid_slot: 'الوقت لا يطابق الفاصل بين المواعيد.', err_booking_not_found: 'الحجز غير موجود.', err_invalid_status: 'حالة غير صحيحة.',
+    setupTitle: 'تنبيه', noValue: '—',
+  },
+  en: {
+    appTitle: 'El Hanawy — Admin', brandName: 'El Hanawy', adminPanel: 'Admin dashboard',
+    navDashboard: 'Dashboard', navBookings: 'Bookings', navCustomers: 'Customers', navServices: 'Services',
+    navSchedule: 'Working hours', navNotifications: 'Notifications', navReports: 'Reports', navSettings: 'Settings',
+    email: 'Email', password: 'Password', login: 'Log in', logout: 'Log out',
+    notAdmin: 'This account is not an admin account.', errLogin: 'Incorrect email or password.',
+    errConfig: 'The Firebase settings in this dashboard are wrong (API key).', errNetwork: 'Check your internet connection and try again.', errTooMany: 'Too many attempts. Please wait.',
+    langOther: 'العربية', themeToggle: 'Toggle theme',
+    save: 'Save', saved: 'Saved.', cancel: 'Cancel', delete: 'Delete', deleted: 'Deleted.', edit: 'Edit', add: 'Add',
+    close: 'Close', confirm: 'Confirm', confirmTitle: 'Please confirm', loading: 'Loading…', search: 'Search',
+    active: 'Active', inactive: 'Inactive', currency: 'EGP {n}', minutesShort: '{n} min',
+    errGeneric: 'Something went wrong. Please try again.', errPermission: 'You do not have permission for this action.',
+    errFunctionsOff: 'The booking server functions are not enabled yet.', errRules: 'Could not load data. Make sure the security rules are published and your account is an admin.',
+    day_sat: 'Saturday', day_sun: 'Sunday', day_mon: 'Monday', day_tue: 'Tuesday', day_wed: 'Wednesday', day_thu: 'Thursday', day_fri: 'Friday',
+    am: 'AM', pm: 'PM',
+    st_pending: 'Pending', st_confirmed: 'Confirmed', st_cancelled: 'Cancelled', st_completed: 'Completed', st_rejected: 'Rejected',
+    statToday: "Today's bookings", statPending: 'Pending', statConfirmed: 'Upcoming confirmed', statCompleted: 'Completed today',
+    statCancelled: 'Cancelled today', statCustomers: 'Total customers', statRevenue: "Today's revenue",
+    todayNext: "Today's appointments", pendingRequests: 'Waiting for your answer', last7: 'Last 7 days',
+    noBookingsToday: 'No bookings today.', noPending: 'No pending requests.',
+    newBookingToast: 'New booking: {name} — {service}',
+    f_today: 'Today', f_upcoming: 'Upcoming', f_pending: 'Pending', f_previous: 'Previous', f_all: 'All',
+    searchBookings: 'Search by name, phone or service', searchCustomers: 'Search by name, phone or email',
+    actConfirm: 'Confirm', actReject: 'Reject', actCancel: 'Cancel booking', actComplete: 'Complete', actEdit: 'Edit',
+    reasonTitle: 'Reason (optional)', reasonPlaceholder: 'Write a reason the customer will see…',
+    editBookingTitle: 'Edit booking', fDate: 'Date', fTime: 'Time', fNote: 'Admin note',
+    reschedNote: 'Changing the time notifies the customer.', noBookings: 'No bookings here.',
+    custName: 'Name', custPhone: 'Phone', custEmail: 'Email', custSince: 'Joined', custBookings: 'Bookings',
+    custLast: 'Last booking', custHistory: 'Booking history', noCustomers: 'No customers yet.',
+    svcAdd: 'Add service', svcEdit: 'Edit service', svcNameAr: 'Name (Arabic)', svcNameEn: 'Name (English)',
+    svcDescAr: 'Description (Arabic)', svcDescEn: 'Description (English)', svcPrice: 'Price (EGP)', svcDuration: 'Duration (min)',
+    svcActivate: 'Activate', svcDeactivate: 'Deactivate', svcOrder: 'Order', svcImage: 'Image URL (optional)', svcActive: 'Visible to customers',
+    svcDeleteConfirm: 'This deletes the service permanently. Past bookings keep their name and price. Deactivating is usually better.',
+    noServices: 'No services yet. Add the first one.', errNames: 'Enter the service name in Arabic and English.',
+    errDurationMax: 'A service can last at most {n} minutes (based on the appointment interval).', errPrice: 'Enter a valid price.', errDuration: 'Enter a valid duration (at least 5 minutes).',
+    schedTitle: 'Working hours', open: 'Open', closed: 'Closed', from: 'From', to: 'To',
+    closedDates: 'Holidays and unavailable dates', addDate: 'Add date', noClosedDates: 'No dates added.',
+    errHours: 'Closing time must be after opening time.',
+    setSalon: 'Salon details', salonNameAr: 'Name (Arabic)', salonNameEn: 'Name (English)', salonPhone: 'Phone', salonAddress: 'Address',
+    setRules: 'Booking and cancellation rules', ruleStep: 'Time between appointments (min)', ruleAdvance: 'Minimum notice to book (min)',
+    ruleMaxDays: 'How many days ahead customers can book', ruleCancel: 'Cancellation cut-off before appointment (min)',
+    notifTitle: 'Send a notification to customers', notifAudience: 'Recipients', audAll: 'All customers', audOne: 'One customer',
+    titleAr: 'Title (Arabic)', titleEn: 'Title (English)', bodyAr: 'Message (Arabic)', bodyEn: 'Message (English)',
+    send: 'Send', sent: 'Sent to {n} customer(s).', notifHint: "Customers receive it in their app language. Fill in both languages.", errNotif: 'Fill in the title and message in both languages.',
+    repRange: 'Period', rep7: '7 days', rep30: '30 days', rep90: '90 days', repAll: 'All time',
+    repTotal: 'Total bookings', repCompleted: 'Completed', repRevenue: 'Revenue', repCancelRate: 'Cancelled / rejected rate',
+    repByService: 'By service', repByDay: 'By day', count: 'Count', service: 'Service',
+    err_slot_taken: 'This appointment is no longer available.', err_slot_in_past: 'This time is in the past.', err_too_far_ahead: 'That date is too far ahead.',
+    err_closed_date: 'The salon is closed on that date.', err_closed_day: 'The salon is closed that day.',
+    err_outside_working_hours: 'That time is outside working hours.', err_invalid_datetime: 'Invalid date or time.',
+    err_invalid_slot: "The time doesn't match the appointment interval.", err_booking_not_found: 'Booking not found.', err_invalid_status: 'Invalid status.',
+    setupTitle: 'Notice', noValue: '—',
+  },
+};
+
+let LANG = 'ar';
+try { LANG = localStorage.getItem('hanawy_lang') === 'en' ? 'en' : 'ar'; } catch (e) { /* ignore */ }
+
+function getLang() { return LANG; }
+
+function applyLang() {
+  const r = document.documentElement;
+  r.lang = LANG;
+  r.dir = LANG === 'ar' ? 'rtl' : 'ltr';
+  document.title = t('appTitle');
+}
+
+function setLang(l) {
+  LANG = l === 'en' ? 'en' : 'ar';
+  try { localStorage.setItem('hanawy_lang', LANG); } catch (e) { /* ignore */ }
+  applyLang();
+}
+
+function t(key, vars) {
+  let s = (DICT[LANG] && DICT[LANG][key]) || DICT.en[key] || key;
+  if (vars) for (const k of Object.keys(vars)) s = s.split('{' + k + '}').join(String(vars[k]));
+  return s;
+}
+
+/** bilingual field helper: pick(service, 'name') -> nameAr / nameEn */
+function pick(obj, base) {
+  const ar = (obj && obj[base + 'Ar']) || '';
+  const en = (obj && obj[base + 'En']) || '';
+  return LANG === 'ar' ? (ar || en) : (en || ar);
+}
+
+// ---- theme.js ----
+let THEME = 'light';
+
+function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem('hanawy_theme'); } catch (e) { /* ignore */ }
+  THEME = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = THEME;
+}
+
+function toggleTheme() {
+  THEME = THEME === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = THEME;
+  try { localStorage.setItem('hanawy_theme', THEME); } catch (e) { /* ignore */ }
+}
+
+function currentTheme() { return THEME; }
+
+// ---- ui.js ----
+
+// ---------------------------------------------------------------- DOM helper
+function h(tag, attrs, ...kids) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === undefined || v === null || v === false) continue;
+    if (k === 'class') node.className = v;
+    else if (k === 'html') node.innerHTML = v; // trusted static SVG only
+    else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2).toLowerCase(), v);
+    else if (k === 'for') node.htmlFor = v;
+    else if (k in node && k !== 'list') node[k] = v;
+    else node.setAttribute(k, v === true ? '' : v);
+  }
+  for (const kid of kids.flat(Infinity)) {
+    if (kid === undefined || kid === null || kid === false) continue;
+    node.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+  }
+  return node;
+}
+
+// ---------------------------------------------------------------- icons
+const ICONS = {
+  dashboard: '<rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>',
+  calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+  scissors: '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/>',
+  clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  bell: '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+  chart: '<path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/>',
+  settings: '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>',
+  moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+  globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  logout: '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  edit: '<path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  trash: '<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+};
+
+function icon(name, size = 20) {
+  return h('span', {
+    class: 'ic',
+    html: `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ''}</svg>`,
+  });
+}
+
+// ---------------------------------------------------------------- buttons & fields
+function button(label, onclick, variant = 'primary', opts = {}) {
+  return h('button', { type: 'button', class: 'btn ' + variant + (opts.small ? ' sm' : ''), onclick, title: opts.title },
+    opts.icon ? icon(opts.icon, 16) : null, label);
+}
+
+function field(label, control, hint) {
+  return h('label', { class: 'field' }, h('span', { class: 'field-label' }, label), control, hint ? h('span', { class: 'field-hint' }, hint) : null);
+}
+
+function input(attrs) { return h('input', { class: 'input', ...attrs }); }
+
+/** Runs fn while the button is disabled; shows errors as a toast. */
+async function withBusy(btn, fn) {
+  if (btn) btn.disabled = true;
+  try { return await fn(); } finally { if (btn) btn.disabled = false; }
+}
+
+// ---------------------------------------------------------------- toast
+function toast(message, type = 'ok') {
+  let box = document.getElementById('toasts');
+  if (!box) { box = h('div', { id: 'toasts', class: 'toasts', 'aria-live': 'polite' }); document.body.append(box); }
+  const el = h('div', { class: 'toast ' + type }, message);
+  box.append(el);
+  setTimeout(() => el.classList.add('out'), 4200);
+  setTimeout(() => el.remove(), 4600);
+}
+
+// ---------------------------------------------------------------- modal
+function openModal({ title, content, actions = [], wide = false, onClose }) {
+  const overlay = h('div', { class: 'overlay' });
+  const box = h('div', { class: 'modal' + (wide ? ' wide' : ''), role: 'dialog', 'aria-modal': 'true' },
+    h('div', { class: 'modal-head' },
+      h('h3', {}, title),
+      h('button', { type: 'button', class: 'icon-btn', 'aria-label': t('close'), onclick: () => close() }, icon('x'))),
+    h('div', { class: 'modal-body' }, content),
+    actions.length ? h('div', { class: 'modal-foot' }, actions) : null);
+  overlay.append(box);
+  function onKey(e) { if (e.key === 'Escape') close(); }
+  function close() {
+    overlay.remove();
+    document.removeEventListener('keydown', onKey);
+    if (onClose) onClose();
+  }
+  overlay.addEventListener('mousedown', (e) => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', onKey);
+  document.body.append(overlay);
+  return { close, box };
+}
+
+function confirmDialog(message, opts = {}) {
+  return new Promise((resolve) => {
+    let done = false;
+    let m = null;
+    const finish = (v) => { if (done) return; done = true; if (m) m.close(); resolve(v); };
+    m = openModal({
+      title: t('confirmTitle'),
+      content: h('p', {}, message),
+      onClose: () => finish(false),
+      actions: [
+        button(t('cancel'), () => finish(false), 'ghost'),
+        button(opts.okLabel || t('confirm'), () => finish(true), opts.danger ? 'danger' : 'primary'),
+      ],
+    });
+  });
+}
+
+/** Optional free-text reason. Resolves to a string ('' allowed) or null if dismissed. */
+function promptReason(title) {
+  return new Promise((resolve) => {
+    let done = false;
+    let m = null;
+    const area = h('textarea', { class: 'input', rows: 3, placeholder: t('reasonPlaceholder'), maxLength: 300 });
+    const finish = (v) => { if (done) return; done = true; if (m) m.close(); resolve(v); };
+    m = openModal({
+      title,
+      content: area,
+      onClose: () => finish(null),
+      actions: [
+        button(t('cancel'), () => finish(null), 'ghost'),
+        button(t('confirm'), () => finish(area.value.trim()), 'primary'),
+      ],
+    });
+    setTimeout(() => area.focus(), 30);
+  });
+}
+
+// ---------------------------------------------------------------- formatting (Africa/Cairo)
+function todayCairo() {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Africa/Cairo' }).format(new Date());
+}
+
+function addDays(dateStr, n) {
+  const d = new Date(dateStr + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+function fmtDate(dateStr, withWeekday = true) {
+  if (!dateStr) return '';
+  const locale = getLang() === 'ar' ? 'ar-EG-u-nu-latn' : 'en-GB';
+  const opts = { day: 'numeric', month: 'short', timeZone: 'UTC' };
+  if (withWeekday) opts.weekday = 'short';
+  return new Intl.DateTimeFormat(locale, opts).format(new Date(dateStr + 'T12:00:00Z'));
+}
+
+function fmtTime(hhmm) {
+  if (!hhmm) return '';
+  const [hh, mm] = hhmm.split(':').map(Number);
+  const suffix = hh >= 12 ? t('pm') : t('am');
+  return `${hh % 12 || 12}:${String(mm).padStart(2, '0')} ${suffix}`;
+}
+
+function fmtMoney(n) {
+  const v = Number(n) || 0;
+  return t('currency', { n: v === Math.round(v) ? String(v) : v.toFixed(2) });
+}
+
+function tsToDate(ts) {
+  if (!ts) return null;
+  if (typeof ts.toDate === 'function') return ts.toDate();
+  return null;
+}
+
+function fmtTimestampDate(ts) {
+  const d = tsToDate(ts);
+  if (!d) return t('noValue');
+  return fmtDate(new Intl.DateTimeFormat('en-CA', { timeZone: 'Africa/Cairo' }).format(d), false);
+}
+
+function pageHeader(title, ...actions) {
+  return h('div', { class: 'page-head' }, h('h1', {}, title), h('div', { class: 'page-actions' }, actions));
+}
+
+function emptyBox(text) { return h('div', { class: 'empty' }, text); }
+
+const ACTIVE_STATUSES = ['pending', 'confirmed'];
+
+// ---- booking-logic.js ----
+// Pure booking helpers (no DOM, no Firebase) - unit tested in tools/logic-test.mjs.
+// They mirror lib/features/booking/domain/slot_calculator.dart in the mobile app.
+
+const CAIRO = 'Africa/Cairo';
+
+/** firestore.rules allows at most this many slot locks per booking. */
+const MAX_LOCKS = 6;
+
+function pad2(n) { return String(n).padStart(2, '0'); }
+
+/** "20260925_1900": slotLocks document id for the slot starting at minuteOfDay. */
+function lockIdFor(dateStr, minuteOfDay) {
+  return dateStr.replace(/-/g, '') + '_' + pad2(Math.floor(minuteOfDay / 60)) + pad2(minuteOfDay % 60);
+}
+
+function locksNeeded(durationMinutes, stepMinutes) {
+  return Math.ceil(durationMinutes / stepMinutes);
+}
+
+function lockIdsFor(dateStr, timeStr, durationMinutes, stepMinutes) {
+  const [h, m] = timeStr.split(':').map(Number);
+  const start = h * 60 + m;
+  const ids = [];
+  for (let i = 0; i < locksNeeded(durationMinutes, stepMinutes); i++) ids.push(lockIdFor(dateStr, start + i * stepMinutes));
+  return ids;
+}
+
+function tzOffsetMs(utcMs) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: CAIRO, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+  }).formatToParts(new Date(utcMs));
+  const o = {};
+  for (const p of parts) o[p.type] = p.value;
+  const asUtc = Date.UTC(+o.year, +o.month - 1, +o.day, +o.hour % 24, +o.minute, +o.second);
+  return asUtc - Math.floor(utcMs / 1000) * 1000;
+}
+
+/** "2026-09-25" + "19:00" in Africa/Cairo  ->  the exact instant (Date, UTC). */
+function cairoToUtc(dateStr, timeStr) {
+  const [y, mo, d] = dateStr.split('-').map(Number);
+  const [h, mi] = timeStr.split(':').map(Number);
+  const naive = Date.UTC(y, mo - 1, d, h, mi);
+  const guess = naive - tzOffsetMs(naive);
+  return new Date(naive - tzOffsetMs(guess));
+}
+
+// ---- firebase.js ----
+
+// window.FIREBASE_CONFIG is injected into index.html by build.py (from config.json).
+const app = initializeApp(window.FIREBASE_CONFIG);
+const auth = getAuth(app);
+const db = getFirestore(app);
+// Only used for push notifications (adminSendNotification), which need a server.
+// Must match setGlobalOptions({ region }) in elhanawy-backend/functions/src/index.ts
+const fns = getFunctions(app, 'europe-west1');
+const callAdminSendNotification = httpsCallable(fns, 'adminSendNotification');
+
+// ---- store.js ----
+
+/** Live copy of the Firestore data the dashboard needs. Everything is real-time. */
+const store = {
+  bookings: [],
+  customers: [],
+  services: [],
+  settings: { salon: null, workingHours: null, bookingRules: null, closedDates: null },
+  ready: {},
+  error: null,
+};
+
+const LISTENERS = new Set();
+let UNSUBS = [];
+let NEW_BOOKING_HANDLER = null;
+
+function onStore(fn, topics) {
+  const entry = { fn, topics };
+  LISTENERS.add(entry);
+  return () => LISTENERS.delete(entry);
+}
+
+function emit(topic) {
+  LISTENERS.forEach((l) => { if (!l.topics || l.topics.includes(topic)) l.fn(topic); });
+}
+
+function setNewBookingHandler(fn) { NEW_BOOKING_HANDLER = fn; }
+
+function stopStore() {
+  UNSUBS.forEach((u) => u());
+  UNSUBS = [];
+  store.bookings = []; store.customers = []; store.services = [];
+  store.settings = { salon: null, workingHours: null, bookingRules: null, closedDates: null };
+  store.ready = {}; store.error = null;
+}
+
+function startStore() {
+  stopStore();
+  const fail = (e) => { store.error = e; emit('error'); };
+
+  let firstBookings = true;
+  UNSUBS.push(onSnapshot(
+    query(collection(db, 'bookings'), orderBy('startAt', 'desc'), limit(1000)),
+    (snap) => {
+      if (!firstBookings && NEW_BOOKING_HANDLER) {
+        snap.docChanges().forEach((c) => {
+          if (c.type === 'added' && !c.doc.metadata.hasPendingWrites) NEW_BOOKING_HANDLER({ id: c.doc.id, ...c.doc.data() });
+        });
+      }
+      firstBookings = false;
+      store.bookings = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      store.ready.bookings = true;
+      emit('bookings');
+    }, fail));
+
+  UNSUBS.push(onSnapshot(
+    query(collection(db, 'users'), where('role', '==', 'customer')),
+    (snap) => {
+      store.customers = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      store.ready.customers = true;
+      emit('customers');
+    }, fail));
+
+  UNSUBS.push(onSnapshot(collection(db, 'services'), (snap) => {
+    store.services = snap.docs.map((d) => ({ id: d.id, ...d.data() }))
+      .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+    store.ready.services = true;
+    emit('services');
+  }, fail));
+
+  const loaded = new Set();
+  ['salon', 'workingHours', 'bookingRules', 'closedDates'].forEach((name) => {
+    UNSUBS.push(onSnapshot(doc(db, 'settings', name), (snap) => {
+      store.settings[name] = snap.exists() ? snap.data() : null;
+      loaded.add(name);
+      if (loaded.size === 4) store.ready.settings = true;
+      emit('settings');
+    }, fail));
+  });
+}
+
+// ---- views/booking-ui.js ----
+
+/** Turn a Firebase / function error into a friendly, localized message. */
+function errMsg(e) {
+  const m = (e && e.message) || '';
+  const code = (e && e.code) || '';
+  const known = ['slot_taken', 'slot_in_past', 'too_far_ahead', 'closed_date', 'closed_day', 'outside_working_hours',
+    'invalid_datetime', 'invalid_slot', 'booking_not_found', 'invalid_status'];
+  const k = known.find((x) => m.includes(x));
+  if (k) return t('err_' + k);
+  if (code.includes('permission-denied')) return t('errPermission');
+  if (code.includes('not-found') || code.includes('unavailable') || code.includes('internal') || /Failed to fetch|NetworkError/i.test(m)) return t('errFunctionsOff');
+  return t('errGeneric');
+}
+
+function statusBadge(status) {
+  return h('span', { class: 'badge s-' + status }, t('st_' + status));
+}
+
+/**
+ * Change a booking as the admin, in ONE atomic batch: the booking update + the slot locks it needs
+ * (created when it becomes / stays active, released when it is cancelled, rejected or completed).
+ * changes: { status?, date?, time?, adminNote?, cancellationReason? }
+ */
+async function updateBooking(b, changes) {
+  try {
+    const step = Number((store.settings.bookingRules || {}).slotStepMinutes) || 15;
+    const newStatus = changes.status || b.status;
+    const date = changes.date || b.date;
+    const time = changes.time || b.time;
+    const rescheduled = date !== b.date || time !== b.time;
+    const wasActive = ACTIVE_STATUSES.includes(b.status);
+    const wantActive = ACTIVE_STATUSES.includes(newStatus);
+    const oldIds = b.lockIds || [];
+
+    let newIds;
+    if (!wantActive) newIds = [];
+    else if (wasActive && !rescheduled) newIds = oldIds;       // e.g. only confirming or editing a note
+    else newIds = lockIdsFor(date, time, b.durationMinutes, step);
+    if (newIds.length > MAX_LOCKS) throw new Error('too_long');
+
+    const update = { updatedAt: serverTimestamp(), lockIds: newIds };
+    if (changes.status) update.status = changes.status;
+    if (typeof changes.adminNote === 'string') update.adminNote = changes.adminNote;
+    if (changes.status === 'cancelled' || changes.status === 'rejected') {
+      update.cancelledBy = 'admin';
+      if (changes.cancellationReason) update.cancellationReason = changes.cancellationReason;
+    }
+    if (rescheduled) {
+      const start = cairoToUtc(date, time);
+      update.date = date;
+      update.time = time;
+      update.startAt = Timestamp.fromDate(start);
+      update.endAt = Timestamp.fromDate(new Date(start.getTime() + b.durationMinutes * 60000));
+    }
+
+    const toCreate = newIds.filter((id) => !oldIds.includes(id));
+    const toDelete = oldIds.filter((id) => !newIds.includes(id));
+    for (const id of toCreate) {
+      const snap = await getDoc(doc(db, 'slotLocks', id));
+      if (snap.exists()) throw new Error('slot_taken');
+    }
+
+    const batch = writeBatch(db);
+    const lockStart = update.startAt || b.startAt;
+    toCreate.forEach((id) => batch.set(doc(db, 'slotLocks', id), { bookingId: b.id, startAt: lockStart }));
+    toDelete.forEach((id) => batch.delete(doc(db, 'slotLocks', id)));
+    batch.update(doc(db, 'bookings', b.id), update);
+    await batch.commit();
+    toast(t('saved'));
+    return true;
+  } catch (e) {
+    console.error(e);
+    toast(errMsg(e), 'err');
+    return false;
+  }
+}
+
+async function changeStatus(b, status, btn, askReason) {
+  let reason;
+  if (askReason) {
+    reason = await promptReason(t('reasonTitle'));
+    if (reason === null) return;
+  }
+  await withBusy(btn, () => updateBooking(b, { status, cancellationReason: reason || '' }));
+}
+
+function openEditBooking(b) {
+  const active = ACTIVE_STATUSES.includes(b.status);
+  const date = input({ type: 'date', value: b.date || '', disabled: !active });
+  const time = input({ type: 'time', value: b.time || '', step: 900, disabled: !active });
+  const note = h('textarea', { class: 'input', rows: 3, maxLength: 500 }, b.adminNote || '');
+  const saveBtn = button(t('save'), async () => {
+    const changes = {};
+    if (active && date.value && date.value !== b.date) changes.date = date.value;
+    if (active && time.value && time.value !== b.time) changes.time = time.value;
+    if ((note.value || '') !== (b.adminNote || '')) changes.adminNote = note.value.trim();
+    if (Object.keys(changes).length === 0) { m.close(); return; }
+    const ok = await withBusy(saveBtn, () => updateBooking(b, changes));
+    if (ok) m.close();
+  }, 'primary');
+  const m = openModal({
+    title: t('editBookingTitle'),
+    content: h('div', { class: 'form' },
+      h('div', { class: 'muted' }, `${b.customerName || ''} — ${pick(b, 'serviceName')}`),
+      h('div', { class: 'grid2' }, field(t('fDate'), date), field(t('fTime'), time)),
+      active ? h('div', { class: 'muted small' }, t('reschedNote')) : null,
+      field(t('fNote'), note)),
+    actions: [button(t('cancel'), () => m.close(), 'ghost'), saveBtn],
+  });
+}
+
+/** Action buttons that make sense for the booking's current status. */
+function bookingActions(b) {
+  const out = [];
+  if (b.status === 'pending') {
+    const c = button(t('actConfirm'), () => changeStatus(b, 'confirmed', c, false), 'primary', { small: true, icon: 'check' });
+    const r = button(t('actReject'), () => changeStatus(b, 'rejected', r, true), 'danger', { small: true, icon: 'x' });
+    out.push(c, r);
+  } else if (b.status === 'confirmed') {
+    const c = button(t('actComplete'), () => changeStatus(b, 'completed', c, false), 'primary', { small: true, icon: 'check' });
+    const x = button(t('actCancel'), () => changeStatus(b, 'cancelled', x, true), 'danger', { small: true, icon: 'x' });
+    out.push(c, x);
+  }
+  out.push(button(t('actEdit'), () => openEditBooking(b), 'ghost', { small: true, icon: 'edit' }));
+  return out;
+}
+
+function bookingRow(b) {
+  return h('article', { class: 'bk s-' + b.status },
+    h('div', { class: 'bk-when' },
+      h('div', { class: 'bk-time' }, fmtTime(b.time)),
+      h('div', { class: 'muted small' }, fmtDate(b.date))),
+    h('div', { class: 'bk-main' },
+      h('div', { class: 'bk-name' }, b.customerName || t('noValue')),
+      h('a', { class: 'bk-phone', href: 'tel:' + (b.customerPhone || '') }, icon('phone', 14), b.customerPhone || ''),
+      h('div', { class: 'muted' }, `${pick(b, 'serviceName')} · ${fmtMoney(b.servicePrice)}`),
+      b.cancellationReason ? h('div', { class: 'note' }, b.cancellationReason) : null,
+      b.adminNote ? h('div', { class: 'note' }, b.adminNote) : null),
+    h('div', { class: 'bk-side' }, statusBadge(b.status), h('div', { class: 'bk-actions' }, bookingActions(b))));
+}
+
+// ---- views/dashboard.js ----
+
+const sortByWhen = (a, b) => (a.date + a.time).localeCompare(b.date + b.time);
+
+function viewDashboard(root) {
+  const stats = h('div', { class: 'stats' });
+  const chart = h('div', { class: 'card' });
+  const nextBox = h('div', { class: 'card' });
+  const pendingBox = h('div', { class: 'card' });
+  root.append(pageHeader(t('navDashboard')), stats,
+    h('div', { class: 'cols' }, nextBox, pendingBox), chart);
+
+  function stat(label, value, accent) {
+    return h('div', { class: 'stat' + (accent ? ' accent' : '') }, h('div', { class: 'stat-value' }, String(value)), h('div', { class: 'stat-label' }, label));
+  }
+
+  function draw() {
+    const today = todayCairo();
+    const all = store.bookings;
+    const todays = all.filter((b) => b.date === today);
+    const pending = all.filter((b) => b.status === 'pending');
+    const confirmedUpcoming = all.filter((b) => b.status === 'confirmed' && b.date >= today);
+    const completedToday = todays.filter((b) => b.status === 'completed');
+    const cancelledToday = todays.filter((b) => b.status === 'cancelled' || b.status === 'rejected');
+    const revenue = completedToday.reduce((s, b) => s + (Number(b.servicePrice) || 0), 0);
+
+    stats.replaceChildren(
+      stat(t('statToday'), todays.length, true),
+      stat(t('statPending'), pending.length),
+      stat(t('statConfirmed'), confirmedUpcoming.length),
+      stat(t('statCompleted'), completedToday.length),
+      stat(t('statCancelled'), cancelledToday.length),
+      stat(t('statCustomers'), store.customers.length),
+      stat(t('statRevenue'), fmtMoney(revenue)));
+
+    const nextList = todays.filter((b) => ACTIVE_STATUSES.includes(b.status)).sort(sortByWhen);
+    nextBox.replaceChildren(h('h2', {}, t('todayNext')),
+      nextList.length ? h('div', { class: 'bk-list' }, nextList.map(bookingRow)) : emptyBox(t('noBookingsToday')));
+
+    const pendList = pending.slice().sort(sortByWhen).slice(0, 6);
+    pendingBox.replaceChildren(h('h2', {}, t('pendingRequests')),
+      pendList.length ? h('div', { class: 'bk-list' }, pendList.map(bookingRow)) : emptyBox(t('noPending')));
+
+    // last 7 days, bookings that were not cancelled/rejected
+    const days = [];
+    for (let i = 6; i >= 0; i--) days.push(addDays(today, -i));
+    const counts = days.map((d) => all.filter((b) => b.date === d && b.status !== 'cancelled' && b.status !== 'rejected').length);
+    const max = Math.max(1, ...counts);
+    chart.replaceChildren(h('h2', {}, t('last7')),
+      h('div', { class: 'bars' }, days.map((d, i) =>
+        h('div', { class: 'bar-col' },
+          h('div', { class: 'bar-num' }, String(counts[i])),
+          h('div', { class: 'bar', style: `height:${Math.round((counts[i] / max) * 100)}%` }),
+          h('div', { class: 'bar-lbl' }, fmtDate(d, false))))));
+  }
+
+  draw();
+  return onStore(draw, ['bookings', 'customers']);
+}
+
+// ---- views/bookings.js ----
+
+const FILTERS = ['today', 'upcoming', 'pending', 'previous', 'all'];
+
+function matchesFilter(b, f, today) {
+  switch (f) {
+    case 'today': return b.date === today;
+    case 'upcoming': return b.date >= today && ACTIVE_STATUSES.includes(b.status);
+    case 'pending': return b.status === 'pending';
+    case 'previous': return b.date < today;
+    default: return true;
+  }
+}
+
+function viewBookings(root) {
+  let filter = 'pending';
+  let query = '';
+  const tabs = h('div', { class: 'tabs' });
+  const search = input({
+    type: 'search', class: 'input search', placeholder: t('searchBookings'),
+    oninput: (e) => { query = e.target.value.trim().toLowerCase(); drawList(); },
+  });
+  const list = h('div', { class: 'bk-list' });
+  root.append(pageHeader(t('navBookings')), h('div', { class: 'toolbar' }, tabs, search), list);
+
+  function visible(f) {
+    const today = todayCairo();
+    return store.bookings.filter((b) => matchesFilter(b, f, today));
+  }
+
+  function drawTabs() {
+    tabs.replaceChildren(...FILTERS.map((f) => h('button', {
+      type: 'button', class: 'tab' + (f === filter ? ' active' : ''),
+      onclick: () => { filter = f; drawTabs(); drawList(); },
+    }, t('f_' + f), h('span', { class: 'count' }, String(visible(f).length)))));
+  }
+
+  function drawList() {
+    let rows = visible(filter);
+    if (query) {
+      rows = rows.filter((b) => [b.customerName, b.customerPhone, b.serviceNameAr, b.serviceNameEn]
+        .some((v) => (v || '').toLowerCase().includes(query)));
+    }
+    const asc = filter === 'today' || filter === 'upcoming' || filter === 'pending';
+    rows = rows.slice().sort((a, b) => {
+      const c = (a.date + a.time).localeCompare(b.date + b.time);
+      return asc ? c : -c;
+    });
+    list.replaceChildren(...(rows.length ? rows.map(bookingRow) : [emptyBox(t('noBookings'))]));
+  }
+
+  drawTabs();
+  drawList();
+  return onStore(() => { drawTabs(); drawList(); }, ['bookings']);
+}
+
+// ---- views/customers.js ----
+
+function bookingsOf(c) { return store.bookings.filter((b) => b.customerId === c.id); }
+
+function openHistory(c) {
+  const rows = bookingsOf(c).slice().sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time));
+  openModal({
+    title: c.name || t('noValue'),
+    wide: true,
+    content: h('div', {},
+      h('div', { class: 'muted', style: 'margin-bottom:12px' }, [c.phone, c.email].filter(Boolean).join(' · ')),
+      h('h4', {}, t('custHistory')),
+      rows.length
+        ? h('div', { class: 'hist' }, rows.map((b) => h('div', { class: 'hist-row' },
+          h('div', {}, `${fmtDate(b.date)} · ${fmtTime(b.time)}`),
+          h('div', { class: 'muted' }, `${pick(b, 'serviceName')} · ${fmtMoney(b.servicePrice)}`),
+          statusBadge(b.status))))
+        : emptyBox(t('noBookings'))),
+  });
+}
+
+function viewCustomers(root) {
+  let query = '';
+  const list = h('div', { class: 'cust-list' });
+  const search = input({
+    type: 'search', class: 'input search', placeholder: t('searchCustomers'),
+    oninput: (e) => { query = e.target.value.trim().toLowerCase(); draw(); },
+  });
+  root.append(pageHeader(t('navCustomers')), h('div', { class: 'toolbar' }, search), list);
+
+  function draw() {
+    let rows = store.customers.slice().sort((a, b) => {
+      const ta = a.createdAt && a.createdAt.toMillis ? a.createdAt.toMillis() : 0;
+      const tb = b.createdAt && b.createdAt.toMillis ? b.createdAt.toMillis() : 0;
+      return tb - ta;
+    });
+    if (query) rows = rows.filter((c) => [c.name, c.phone, c.email].some((v) => (v || '').toLowerCase().includes(query)));
+    list.replaceChildren(...(rows.length ? rows.map((c) => {
+      const bk = bookingsOf(c);
+      const last = bk.slice().sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time))[0];
+      return h('article', { class: 'cust', onclick: () => openHistory(c) },
+        h('div', { class: 'avatar' }, (c.name || '?').trim().charAt(0)),
+        h('div', { class: 'cust-main' },
+          h('div', { class: 'bk-name' }, c.name || t('noValue')),
+          h('a', { class: 'bk-phone', href: 'tel:' + (c.phone || ''), onclick: (e) => e.stopPropagation() }, icon('phone', 14), c.phone || ''),
+          h('div', { class: 'muted small' }, c.email || '')),
+        h('div', { class: 'cust-meta' },
+          h('div', {}, `${t('custBookings')}: ${bk.length}`),
+          h('div', { class: 'muted small' }, `${t('custLast')}: ${last ? fmtDate(last.date, false) : t('noValue')}`),
+          h('div', { class: 'muted small' }, `${t('custSince')}: ${fmtTimestampDate(c.createdAt)}`)));
+    }) : [emptyBox(t('noCustomers'))]));
+  }
+
+  draw();
+  return onStore(draw, ['customers', 'bookings']);
+}
+
+// ---- views/services.js ----
+
+function openServiceForm(svc) {
+  const isNew = !svc;
+  const s = svc || { active: true, durationMinutes: 30, sortOrder: store.services.length + 1, price: '' };
+  const nameAr = input({ value: s.nameAr || '' });
+  const nameEn = input({ value: s.nameEn || '', dir: 'ltr' });
+  const descAr = h('textarea', { class: 'input', rows: 2 }, s.descriptionAr || '');
+  const descEn = h('textarea', { class: 'input', rows: 2, dir: 'ltr' }, s.descriptionEn || '');
+  const price = input({ type: 'number', min: 0, step: '0.5', value: s.price, inputMode: 'decimal' });
+  const duration = input({ type: 'number', min: 5, step: 5, value: s.durationMinutes });
+  const order = input({ type: 'number', step: 1, value: s.sortOrder });
+  const image = input({ type: 'url', value: s.imageUrl || '', dir: 'ltr', placeholder: 'https://…' });
+  const active = h('input', { type: 'checkbox', checked: s.active !== false });
+
+  const saveBtn = button(t('save'), async () => {
+    if (!nameAr.value.trim() || !nameEn.value.trim()) return toast(t('errNames'), 'err');
+    const p = Number(price.value);
+    if (price.value === '' || !Number.isFinite(p) || p < 0) return toast(t('errPrice'), 'err');
+    const d = Number(duration.value);
+    if (!Number.isFinite(d) || d < 5) return toast(t('errDuration'), 'err');
+    const step = Number((store.settings.bookingRules || {}).slotStepMinutes) || 15;
+    if (Math.ceil(d / step) > MAX_LOCKS) return toast(t('errDurationMax', { n: MAX_LOCKS * step }), 'err');
+    const data = {
+      nameAr: nameAr.value.trim(), nameEn: nameEn.value.trim(),
+      descriptionAr: descAr.value.trim(), descriptionEn: descEn.value.trim(),
+      price: p, durationMinutes: Math.round(d), sortOrder: Number(order.value) || 0,
+      imageUrl: image.value.trim(), active: active.checked, updatedAt: serverTimestamp(),
+    };
+    try {
+      await withBusy(saveBtn, () => (isNew
+        ? addDoc(collection(db, 'services'), { ...data, createdAt: serverTimestamp() })
+        : updateDoc(doc(db, 'services', svc.id), data)));
+      toast(t('saved'));
+      m.close();
+    } catch (e) {
+      console.error(e);
+      toast(t('errGeneric'), 'err');
+    }
+  }, 'primary');
+
+  const m = openModal({
+    title: isNew ? t('svcAdd') : t('svcEdit'),
+    wide: true,
+    content: h('div', { class: 'form' },
+      h('div', { class: 'grid2' }, field(t('svcNameAr'), nameAr), field(t('svcNameEn'), nameEn)),
+      h('div', { class: 'grid2' }, field(t('svcDescAr'), descAr), field(t('svcDescEn'), descEn)),
+      h('div', { class: 'grid3' }, field(t('svcPrice'), price), field(t('svcDuration'), duration), field(t('svcOrder'), order)),
+      field(t('svcImage'), image),
+      h('label', { class: 'check' }, active, h('span', {}, t('svcActive')))),
+    actions: [button(t('cancel'), () => m.close(), 'ghost'), saveBtn],
+  });
+}
+
+async function toggleActive(svc) {
+  try { await updateDoc(doc(db, 'services', svc.id), { active: !svc.active, updatedAt: serverTimestamp() }); }
+  catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+}
+
+async function removeService(svc) {
+  if (!(await confirmDialog(t('svcDeleteConfirm'), { danger: true, okLabel: t('delete') }))) return;
+  try { await deleteDoc(doc(db, 'services', svc.id)); toast(t('deleted')); }
+  catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+}
+
+function viewServices(root) {
+  const grid = h('div', { class: 'svc-grid' });
+  root.append(pageHeader(t('navServices'), button(t('svcAdd'), () => openServiceForm(null), 'primary', { icon: 'plus' })), grid);
+
+  function draw() {
+    grid.replaceChildren(...(store.services.length ? store.services.map((s) => h('article', { class: 'card svc' + (s.active ? '' : ' off') },
+      h('div', { class: 'svc-top' },
+        h('div', {}, h('h3', {}, pick(s, 'name')), h('div', { class: 'muted small' }, (getOther(s)))),
+        h('span', { class: 'badge ' + (s.active ? 's-confirmed' : 's-cancelled') }, s.active ? t('active') : t('inactive'))),
+      pick(s, 'description') ? h('p', { class: 'muted' }, pick(s, 'description')) : null,
+      h('div', { class: 'svc-meta' },
+        h('strong', {}, fmtMoney(s.price)), h('span', { class: 'muted' }, t('minutesShort', { n: s.durationMinutes || 0 }))),
+      h('div', { class: 'svc-actions' },
+        button(s.active ? t('svcDeactivate') : t('svcActivate'), () => toggleActive(s), 'ghost', { small: true }),
+        button(t('edit'), () => openServiceForm(s), 'ghost', { small: true, icon: 'edit' }),
+        button(t('delete'), () => removeService(s), 'danger', { small: true, icon: 'trash' })))) : [emptyBox(t('noServices'))]));
+  }
+
+  function getOther(s) { return pick({ nameAr: s.nameEn, nameEn: s.nameAr }, 'name'); }
+
+  draw();
+  return onStore(draw, ['services']);
+}
+
+// ---- views/schedule.js ----
+
+// Saturday first, as in the salon's week. Keys match the Cloud Functions (mon..sun).
+const DAYS = ['sat', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri'];
+
+function viewSchedule(root) {
+  const hoursCard = h('div', { class: 'card' });
+  const datesCard = h('div', { class: 'card' });
+  root.append(pageHeader(t('navSchedule')), hoursCard, datesCard);
+  let drawn = false;
+
+  function drawHours() {
+    const saved = store.settings.workingHours || {};
+    const rows = DAYS.map((d) => {
+      const v = saved[d] || { open: true, from: '10:00', to: '22:00' };
+      const open = h('input', { type: 'checkbox', checked: v.open !== false });
+      const from = input({ type: 'time', value: v.from || '10:00', step: 900 });
+      const to = input({ type: 'time', value: v.to || '22:00', step: 900 });
+      const sync = () => { from.disabled = to.disabled = !open.checked; };
+      open.addEventListener('change', sync);
+      sync();
+      return { d, open, from, to, node: h('div', { class: 'hours-row' },
+        h('label', { class: 'check' }, open, h('strong', {}, t('day_' + d))),
+        h('div', { class: 'hours-times' }, h('span', { class: 'muted' }, t('from')), from, h('span', { class: 'muted' }, t('to')), to)) };
+    });
+    const saveBtn = button(t('save'), async () => {
+      const data = {};
+      for (const r of rows) {
+        if (r.open.checked && r.to.value <= r.from.value) return toast(t('errHours'), 'err');
+        data[r.d] = { open: r.open.checked, from: r.from.value, to: r.to.value };
+      }
+      try {
+        await withBusy(saveBtn, () => setDoc(doc(db, 'settings', 'workingHours'), { ...data, updatedAt: serverTimestamp() }));
+        toast(t('saved'));
+      } catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+    }, 'primary');
+    hoursCard.replaceChildren(h('h2', {}, t('schedTitle')), h('div', { class: 'hours' }, rows.map((r) => r.node)),
+      h('div', { class: 'form-actions' }, saveBtn));
+  }
+
+  function drawDates() {
+    const dates = ((store.settings.closedDates || {}).dates || []).slice().sort();
+    const picker = input({ type: 'date', min: todayCairo() });
+    async function save(next) {
+      try { await setDoc(doc(db, 'settings', 'closedDates'), { dates: next, updatedAt: serverTimestamp() }); toast(t('saved')); }
+      catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+    }
+    const addBtn = button(t('addDate'), () => {
+      if (!picker.value || dates.includes(picker.value)) return;
+      save([...dates, picker.value].sort());
+      picker.value = '';
+    }, 'primary', { icon: 'plus' });
+    datesCard.replaceChildren(h('h2', {}, t('closedDates')),
+      h('div', { class: 'inline-form' }, picker, addBtn),
+      dates.length
+        ? h('div', { class: 'chips' }, dates.map((d) => h('span', { class: 'chip' }, fmtDate(d),
+          h('button', { type: 'button', class: 'chip-x', 'aria-label': t('delete'), onclick: () => save(dates.filter((x) => x !== d)) }, '×'))))
+        : emptyBox(t('noClosedDates')));
+  }
+
+  function draw() {
+    if (!store.ready.settings) return;
+    if (!drawn) { drawn = true; drawHours(); }   // form: draw once so typing is never lost
+    drawDates();
+  }
+
+  draw();
+  return onStore(draw, ['settings']);
+}
+
+// ---- views/settings.js ----
+
+const RULE_DEFAULTS = { slotStepMinutes: 15, minAdvanceMinutes: 60, maxDaysAhead: 30, cancelBeforeMinutes: 120 };
+
+function viewSettings(root) {
+  const salonCard = h('div', { class: 'card' });
+  const rulesCard = h('div', { class: 'card' });
+  root.append(pageHeader(t('navSettings')), salonCard, rulesCard);
+  let drawn = false;
+
+  function draw() {
+    if (!store.ready.settings || drawn) return;
+    drawn = true;
+    const s = { nameAr: 'الحناوي', nameEn: 'El Hanawy', phone: '', address: '', ...(store.settings.salon || {}) };
+    const nameAr = input({ value: s.nameAr });
+    const nameEn = input({ value: s.nameEn, dir: 'ltr' });
+    const phone = input({ value: s.phone, type: 'tel', dir: 'ltr' });
+    const address = input({ value: s.address });
+    const saveSalon = button(t('save'), async () => {
+      try {
+        await withBusy(saveSalon, () => setDoc(doc(db, 'settings', 'salon'), {
+          nameAr: nameAr.value.trim(), nameEn: nameEn.value.trim(), phone: phone.value.trim(), address: address.value.trim(),
+          updatedAt: serverTimestamp(),
+        }));
+        toast(t('saved'));
+      } catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+    }, 'primary');
+    salonCard.replaceChildren(h('h2', {}, t('setSalon')), h('div', { class: 'form' },
+      h('div', { class: 'grid2' }, field(t('salonNameAr'), nameAr), field(t('salonNameEn'), nameEn)),
+      h('div', { class: 'grid2' }, field(t('salonPhone'), phone), field(t('salonAddress'), address))),
+    h('div', { class: 'form-actions' }, saveSalon));
+
+    const r = { ...RULE_DEFAULTS, ...(store.settings.bookingRules || {}) };
+    const step = h('select', { class: 'input' }, [15, 30].map((v) => h('option', { value: v, selected: v === r.slotStepMinutes }, String(v))));
+    const advance = input({ type: 'number', min: 0, step: 5, value: r.minAdvanceMinutes });
+    const maxDays = input({ type: 'number', min: 1, step: 1, value: r.maxDaysAhead });
+    const cancel = input({ type: 'number', min: 0, step: 5, value: r.cancelBeforeMinutes });
+    const saveRules = button(t('save'), async () => {
+      const num = (el, fallback) => { const n = Number(el.value); return Number.isFinite(n) && n >= 0 ? Math.round(n) : fallback; };
+      try {
+        await withBusy(saveRules, () => setDoc(doc(db, 'settings', 'bookingRules'), {
+          slotStepMinutes: Number(step.value) || 15,
+          minAdvanceMinutes: num(advance, 60),
+          maxDaysAhead: Math.max(1, num(maxDays, 30)),
+          cancelBeforeMinutes: num(cancel, 120),
+          updatedAt: serverTimestamp(),
+        }));
+        toast(t('saved'));
+      } catch (e) { console.error(e); toast(t('errGeneric'), 'err'); }
+    }, 'primary');
+    rulesCard.replaceChildren(h('h2', {}, t('setRules')), h('div', { class: 'form' },
+      h('div', { class: 'grid2' }, field(t('ruleStep'), step), field(t('ruleAdvance'), advance)),
+      h('div', { class: 'grid2' }, field(t('ruleMaxDays'), maxDays), field(t('ruleCancel'), cancel))),
+    h('div', { class: 'form-actions' }, saveRules));
+  }
+
+  draw();
+  return onStore(draw, ['settings']);
+}
+
+// ---- views/notifications.js ----
+
+function viewNotifications(root) {
+  const audience = h('select', { class: 'input' },
+    h('option', { value: 'all' }, t('audAll')), h('option', { value: 'one' }, t('audOne')));
+  const customer = h('select', { class: 'input', hidden: true });
+  const fillCustomers = () => customer.replaceChildren(
+    ...store.customers.map((c) => h('option', { value: c.id }, `${c.name || ''} — ${c.phone || ''}`)));
+  fillCustomers();
+  audience.addEventListener('change', () => { customer.hidden = audience.value !== 'one'; });
+
+  const titleAr = input({}); const titleEn = input({ dir: 'ltr' });
+  const bodyAr = h('textarea', { class: 'input', rows: 3 });
+  const bodyEn = h('textarea', { class: 'input', rows: 3, dir: 'ltr' });
+
+  const sendBtn = button(t('send'), async () => {
+    if (![titleAr, titleEn, bodyAr, bodyEn].every((el) => el.value.trim())) return toast(t('errNotif'), 'err');
+    try {
+      const res = await withBusy(sendBtn, () => callAdminSendNotification({
+        ...(audience.value === 'one' ? { userId: customer.value } : {}),
+        titleAr: titleAr.value.trim(), titleEn: titleEn.value.trim(), bodyAr: bodyAr.value.trim(), bodyEn: bodyEn.value.trim(),
+      }));
+      toast(t('sent', { n: (res.data && res.data.sent) || 0 }));
+      [titleAr, titleEn, bodyAr, bodyEn].forEach((el) => { el.value = ''; });
+    } catch (e) { console.error(e); toast(errMsg(e), 'err'); }
+  }, 'primary');
+
+  root.append(pageHeader(t('navNotifications')), h('div', { class: 'card' },
+    h('h2', {}, t('notifTitle')), h('p', { class: 'muted' }, t('notifHint')),
+    h('div', { class: 'form' },
+      h('div', { class: 'grid2' }, field(t('notifAudience'), audience), field(' ', customer)),
+      h('div', { class: 'grid2' }, field(t('titleAr'), titleAr), field(t('titleEn'), titleEn)),
+      h('div', { class: 'grid2' }, field(t('bodyAr'), bodyAr), field(t('bodyEn'), bodyEn))),
+    h('div', { class: 'form-actions' }, sendBtn)));
+  return onStore(fillCustomers, ['customers']);
+}
+
+// ---- views/reports.js ----
+
+function viewReports(root) {
+  let range = '30';
+  const select = h('select', { class: 'input', onchange: (e) => { range = e.target.value; draw(); } },
+    [['7', 'rep7'], ['30', 'rep30'], ['90', 'rep90'], ['all', 'repAll']].map(([v, k]) => h('option', { value: v, selected: v === range }, t(k))));
+  const body = h('div', {});
+  root.append(pageHeader(t('navReports'), h('label', { class: 'field inline' }, h('span', { class: 'field-label' }, t('repRange')), select)), body);
+
+  function draw() {
+    const today = todayCairo();
+    const from = range === 'all' ? '0000-00-00' : addDays(today, -Number(range) + 1);
+    const rows = store.bookings.filter((b) => b.date >= from && b.date <= today);
+    const completed = rows.filter((b) => b.status === 'completed');
+    const lost = rows.filter((b) => b.status === 'cancelled' || b.status === 'rejected');
+    const revenue = completed.reduce((s, b) => s + (Number(b.servicePrice) || 0), 0);
+    const rate = rows.length ? Math.round((lost.length / rows.length) * 100) : 0;
+
+    const byService = new Map();
+    completed.forEach((b) => {
+      const k = b.serviceId || b.serviceNameEn;
+      const cur = byService.get(k) || { name: pick(b, 'serviceName'), n: 0, sum: 0 };
+      cur.n += 1; cur.sum += Number(b.servicePrice) || 0;
+      byService.set(k, cur);
+    });
+    const byDay = new Map();
+    rows.forEach((b) => { byDay.set(b.date, (byDay.get(b.date) || 0) + 1); });
+
+    const stat = (label, value) => h('div', { class: 'stat' }, h('div', { class: 'stat-value' }, String(value)), h('div', { class: 'stat-label' }, label));
+    body.replaceChildren(
+      h('div', { class: 'stats' }, stat(t('repTotal'), rows.length), stat(t('repCompleted'), completed.length),
+        stat(t('repRevenue'), fmtMoney(revenue)), stat(t('repCancelRate'), rate + '%')),
+      h('div', { class: 'cols' },
+        h('div', { class: 'card' }, h('h2', {}, t('repByService')),
+          byService.size ? h('table', { class: 'table' },
+            h('thead', {}, h('tr', {}, h('th', {}, t('service')), h('th', {}, t('count')), h('th', {}, t('repRevenue')))),
+            h('tbody', {}, [...byService.values()].sort((a, b) => b.sum - a.sum).map((s) =>
+              h('tr', {}, h('td', {}, s.name), h('td', {}, String(s.n)), h('td', {}, fmtMoney(s.sum)))))) : emptyBox(t('noBookings'))),
+        h('div', { class: 'card' }, h('h2', {}, t('repByDay')),
+          byDay.size ? h('table', { class: 'table' },
+            h('tbody', {}, [...byDay.entries()].sort((a, b) => b[0].localeCompare(a[0])).slice(0, 31).map(([d, n]) =>
+              h('tr', {}, h('td', {}, fmtDate(d)), h('td', {}, String(n)))))) : emptyBox(t('noBookings')))));
+  }
+
+  draw();
+  return onStore(draw, ['bookings']);
+}
+
+// ---- main.js ----
+
+const ROUTES = {
+  dashboard: { key: 'navDashboard', icon: 'dashboard', view: viewDashboard },
+  bookings: { key: 'navBookings', icon: 'calendar', view: viewBookings },
+  customers: { key: 'navCustomers', icon: 'users', view: viewCustomers },
+  services: { key: 'navServices', icon: 'scissors', view: viewServices },
+  schedule: { key: 'navSchedule', icon: 'clock', view: viewSchedule },
+  notifications: { key: 'navNotifications', icon: 'bell', view: viewNotifications },
+  reports: { key: 'navReports', icon: 'chart', view: viewReports },
+  settings: { key: 'navSettings', icon: 'settings', view: viewSettings },
+};
+
+const appRoot = document.getElementById('app');
+let CURRENT_USER = null;
+let CLEANUP = null;
+let ERROR_OFF = null;
+let LOGIN_MESSAGE = '';
+
+function themeIcon() { return icon(currentTheme() === 'dark' ? 'sun' : 'moon'); }
+
+function toolbarButtons(rerender, extra) {
+  return [
+    h('button', { type: 'button', class: 'top-btn', onclick: () => { setLang(getLang() === 'ar' ? 'en' : 'ar'); rerender(); } }, icon('globe', 18), t('langOther')),
+    h('button', { type: 'button', class: 'icon-btn', title: t('themeToggle'), 'aria-label': t('themeToggle'), onclick: () => { toggleTheme(); rerender(); } }, themeIcon()),
+    ...(extra || []),
+  ];
+}
+
+// ---------------------------------------------------------------- login
+function showLogin(message) {
+  if (CLEANUP) { CLEANUP(); CLEANUP = null; }
+  if (ERROR_OFF) { ERROR_OFF(); ERROR_OFF = null; }
+  const email = input({ type: 'email', autocomplete: 'username', dir: 'ltr', required: true });
+  const password = input({ type: 'password', autocomplete: 'current-password', dir: 'ltr', required: true });
+  const msg = h('div', { class: 'login-msg', role: 'alert' }, message || '');
+  const go = async () => {
+    msg.textContent = '';
+    if (!email.value.trim() || !password.value) return;
+    try {
+      await withBusy(loginBtn, () => signInWithEmailAndPassword(auth, email.value.trim(), password.value));
+    } catch (e) {
+      const c = e && e.code || '';
+      msg.textContent = c.includes('network') ? t('errNetwork') : c.includes('too-many') ? t('errTooMany') : (c.includes('api-key') || c.includes('invalid-app')) ? t('errConfig') : t('errLogin');
+    }
+  };
+  const loginBtn = button(t('login'), go, 'primary');
+  [email, password].forEach((el) => el.addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); }));
+  appRoot.replaceChildren(h('div', { class: 'login' },
+    h('div', { class: 'login-tools' }, toolbarButtons(() => showLogin(message))),
+    h('div', { class: 'login-card' },
+      h('img', { class: 'login-logo', src: window.LOGO_DATA, alt: '' }),
+      h('h1', {}, t('brandName')), h('p', { class: 'muted' }, t('adminPanel')),
+      h('div', { class: 'form' }, field(t('email'), email), field(t('password'), password)),
+      msg, loginBtn)));
+}
+
+// ---------------------------------------------------------------- shell + router
+function routeName() {
+  const r = (location.hash || '#/dashboard').replace('#/', '');
+  return ROUTES[r] ? r : 'dashboard';
+}
+
+function renderShell() {
+  const nav = h('nav', { class: 'nav' }, Object.entries(ROUTES).map(([name, r]) =>
+    h('a', { href: '#/' + name, 'data-route': name }, icon(r.icon), h('span', {}, t(r.key)))));
+  const title = h('div', { class: 'top-title' });
+  const content = h('main', { class: 'page', id: 'content' });
+  const banner = h('div', { class: 'banner', hidden: true }, t('errRules'));
+  appRoot.replaceChildren(h('div', { class: 'shell' },
+    h('aside', { class: 'rail' },
+      h('div', { class: 'brand' }, h('img', { src: window.LOGO_DATA, alt: '' }), h('div', {}, h('b', {}, t('brandName')), h('small', {}, t('adminPanel')))),
+      nav),
+    h('div', { class: 'main' },
+      h('header', { class: 'topbar' }, title,
+        h('div', { class: 'top-actions' },
+          h('span', { class: 'who' }, CURRENT_USER ? CURRENT_USER.email : ''),
+          toolbarButtons(() => { renderShell(); route(); }, [
+            h('button', { type: 'button', class: 'top-btn', onclick: () => signOut(auth) }, icon('logout', 18), t('logout'))]))),
+      banner, content)));
+
+  if (ERROR_OFF) ERROR_OFF();
+  ERROR_OFF = onStore(() => { banner.hidden = !store.error; }, ['error']);
+  banner.hidden = !store.error;
+}
+
+function route() {
+  const content = document.getElementById('content');
+  if (!content) return;
+  if (CLEANUP) { CLEANUP(); CLEANUP = null; }
+  const name = routeName();
+  document.querySelectorAll('.nav a').forEach((a) => a.classList.toggle('active', a.dataset.route === name));
+  const top = document.querySelector('.top-title');
+  if (top) top.textContent = t(ROUTES[name].key);
+  content.replaceChildren();
+  CLEANUP = ROUTES[name].view(content) || null;
+  window.scrollTo(0, 0);
+}
+
+function showApp() {
+  renderShell();
+  route();
+}
+
+// ---------------------------------------------------------------- auth gate
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    CURRENT_USER = null;
+    stopStore();
+    showLogin(LOGIN_MESSAGE);
+    LOGIN_MESSAGE = '';
+    return;
+  }
+  try {
+    // Role lives in users/{uid}.role. Only an admin (set in the console) may pass.
+    const snap = await getDoc(doc(db, 'users', user.uid));
+    if (!snap.exists() || snap.data().role !== 'admin') {
+      LOGIN_MESSAGE = t('notAdmin');
+      await signOut(auth);   // the signed-out callback above shows the login screen + message
+      return;
+    }
+  } catch (e) {
+    console.error(e);
+    LOGIN_MESSAGE = t('errGeneric');
+    await signOut(auth);
+    return;
+  }
+  CURRENT_USER = user;
+  setNewBookingHandler((b) => toast(t('newBookingToast', { name: b.customerName || '', service: pick(b, 'serviceName') }), 'info'));
+  startStore();
+  showApp();
+});
+
+window.addEventListener('hashchange', () => { if (CURRENT_USER) route(); });
+
+initTheme();
+applyLang();
+appRoot.replaceChildren(h('div', { class: 'splash' }, h('img', { src: window.LOGO_DATA, alt: '' })));
+
+</script>
+</body>
+</html>
